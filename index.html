@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./img/sparla.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo_bar">
+        <a href="#"><img class="logo" src="./img/sparla.png"></a><p>parla</p>
+        </div>
+        <div class="filter">
+            <input type="text" class="filter-input" id="filter-input" placeholder="Filtra per...">
+        </div>
+    </nav>
+    <div class="main_body">
+        <section class="friends"></section>
+        <section class="messages">
+            <div class="add-new-message">
+            <textarea type="text" class="input-text" 
+            rows="5" id="input-text"  placeholder="Scrivi il tuo messaggio" ></textarea>
+            <input type="text" class="input-sender" id="input-sender" onfocus="this.value=''" placeholder="Chi sei?">
+            <button class="add-new-message-btn">Invio messaggio</button>
+            
+            <div class="messages-list"></div>
+        </section>
+        <section class="empty"></section>
+    </div>
+  <script src="./script.js" type="module"></script>
+  <script src="./utils.js" type="module"></script>
+  <script src="./api.js" type="module"></script>
+</body>
+</html>

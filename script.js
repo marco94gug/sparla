@@ -17,6 +17,20 @@ const filterInput = q('.filter-input');
 const messagesListEl = q('.messages-list');
 const emptyEl = q('.empty');
 
+const menuToggle = document.querySelector('.toggle');
+const hamburger = document.querySelector('.toggle');
+const navMenu = document.querySelector('.friends');
+
+hamburger.addEventListener('click', () => {
+  
+  navMenu.classList.toggle('active');
+})
+
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active')
+    
+})
+
 // Friends
 GET('https://edgemony-backend.herokuapp.com/friends').then((friendList) => {
   friendList.map(friend => createFriendEl(friendsEl, friend.name, friend.photo))
